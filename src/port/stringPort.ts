@@ -1,8 +1,5 @@
-import { plateauFactory } from '../factory/plateauFactory'
+import explore from '../service/explorationService'
 
 export function evaluate(inputFile: string): Array<string> {
-    const plateau = plateauFactory(inputFile)
-
-    plateau.explore();
-    return plateau.reportRoversPositions();
+    return explore(inputFile)
 }
