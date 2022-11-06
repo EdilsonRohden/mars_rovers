@@ -19,22 +19,30 @@ export class Rover {
     private tryToGoNorth(limitH: number) {
         if (this.height < limitH) {
             this.height += 1
+            return
         }
+        console.warn("Rover cannot move NORTH anymore!!")
     }
     private tryToGoSouth() {
         if (this.height > this.BOTTOM_LEFT) {
             this.height -= 1
+            return
         }
+        console.warn("Rover cannot move SOUTH anymore!!")
     }
     private tryToGoEast(limitW: number) {
         if (this.width < limitW) {
             this.width += 1
+            return
         }
+        console.warn("Rover cannot move EAST anymore!!")
     }
     private tryToGoWest() {
         if (this.width > this.BOTTOM_LEFT) {
             this.width -= 1
+            return
         }
+        console.warn("Rover cannot move WEST anymore!!")
     }
 
 
